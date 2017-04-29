@@ -1,0 +1,8 @@
+<resources>
+	<string name="app_name">Crypto</string>
+
+	<!--Main-->
+	<string name="crypto_tab_name">Cryptocurrencies</string>
+	<string name="global_tab_name">Global Stats</string>
+
+</resources>
