@@ -15,7 +15,7 @@ public class MainActivity extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.a_main);
 
 		bindViews();
 		initViews();
@@ -30,6 +30,8 @@ public class MainActivity extends BaseActivity {
 		for (MainTab mainTab : MainTab.values()) {
 			tabLayout.addTab(tabLayout.newTab().setText(mainTab.getTabNameId()));
 		}
-
+		viewPager.setAdapter(new MainViewPagerAdapter(getSupportFragmentManager()));
 	}
+
+
 }

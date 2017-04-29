@@ -1,6 +1,7 @@
 package com.adventurooapps.crypto.views;
 
-import android.app.Fragment;
+
+import android.support.v4.app.Fragment;
 
 /**
  * Created by jcailteux on 4/29/17.

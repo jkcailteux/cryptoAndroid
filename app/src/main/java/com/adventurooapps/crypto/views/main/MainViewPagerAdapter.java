@@ -4,6 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.adventurooapps.crypto.views.BaseFragment;
+import com.adventurooapps.crypto.views.cryptocurrencies.CryptoCurrenciesFragment;
+
 /**
  * Created by jcailteux on 4/29/17.
  */
@@ -17,15 +20,14 @@ public class MainViewPagerAdapter extends FragmentPagerAdapter {
 	@Override
 	public Fragment getItem(int position) {
 		MainTab tab = MainTab.values()[position];
-		Fragment fragment;
 
 		switch (tab) {
 			case CRYPTOCURRENCIES:
-				return null;
+				return new CryptoCurrenciesFragment();
 			case GLOBALSTATS:
-				return null;
+				return new BaseFragment();
 			default:
-				return null;
+				return new BaseFragment();
 		}
 	}
 

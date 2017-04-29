@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by jcailteux on 4/29/17.
  */
 
-public class CryptoCurrency extends BaseModel {
+public class CryptoCurrency {
 
 	private String id;
 	private String name;
@@ -17,11 +17,11 @@ public class CryptoCurrency extends BaseModel {
 	@SerializedName("price_btc")
 	private double priceBTC;
 	@SerializedName("24h_volume_usd")
-	private long dailyVolume;
+	private double dailyVolume;
 	@SerializedName("market_cap_usd")
-	private long marketCap;
+	private double marketCap;
 	@SerializedName("available_supply")
-	private long supply;
+	private double supply;
 	@SerializedName("percent_change_1h")
 	private double hourChange;
 	@SerializedName("percent_change_24h")
@@ -55,15 +55,15 @@ public class CryptoCurrency extends BaseModel {
 		return priceBTC;
 	}
 
-	public long getDailyVolume() {
+	public double getDailyVolume() {
 		return dailyVolume;
 	}
 
-	public long getMarketCap() {
+	public double getMarketCap() {
 		return marketCap;
 	}
 
-	public long getSupply() {
+	public double getSupply() {
 		return supply;
 	}
 
@@ -82,4 +82,5 @@ public class CryptoCurrency extends BaseModel {
 	public long getLastUpdated() {
 		return lastUpdated;
 	}
+
 }
