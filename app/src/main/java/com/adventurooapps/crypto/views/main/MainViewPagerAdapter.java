@@ -13,26 +13,31 @@ import com.adventurooapps.crypto.views.cryptocurrencies.CryptoCurrenciesFragment
 
 public class MainViewPagerAdapter extends FragmentPagerAdapter {
 
-	public MainViewPagerAdapter(FragmentManager fragmentManager) {
-		super(fragmentManager);
-	}
+    public MainViewPagerAdapter(FragmentManager fragmentManager) {
+        super(fragmentManager);
+    }
 
-	@Override
-	public Fragment getItem(int position) {
-		MainTab tab = MainTab.values()[position];
+    @Override
+    public Fragment getItem(int position) {
+        MainTab tab = MainTab.values()[position];
 
-		switch (tab) {
-			case CRYPTOCURRENCIES:
-				return new CryptoCurrenciesFragment();
-			case GLOBALSTATS:
-				return new BaseFragment();
-			default:
-				return new BaseFragment();
-		}
-	}
+        switch (tab) {
+            case CRYPTOCURRENCIES:
+                return new CryptoCurrenciesFragment();
+            case GLOBALSTATS:
+                return new BaseFragment();
+            default:
+                return new BaseFragment();
+        }
+    }
 
-	@Override
-	public int getCount() {
-		return MainTab.values().length;
-	}
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return MainTab.values()[position].name();
+    }
+
+    @Override
+    public int getCount() {
+        return MainTab.values().length;
+    }
 }

@@ -27,10 +27,8 @@ public class MainActivity extends BaseActivity {
 	}
 
 	public void initViews() {
-		for (MainTab mainTab : MainTab.values()) {
-			tabLayout.addTab(tabLayout.newTab().setText(mainTab.getTabNameId()));
-		}
 		viewPager.setAdapter(new MainViewPagerAdapter(getSupportFragmentManager()));
+		tabLayout.setupWithViewPager(viewPager);
 	}
 
 
