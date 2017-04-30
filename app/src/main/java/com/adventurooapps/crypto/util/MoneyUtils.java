@@ -15,7 +15,7 @@ public class MoneyUtils {
 		return format.format(d);
 	}
 
-	public static String formatUSDMillions(Double d) {
+	public static String formatUSDScaled(Double d, boolean daily) {
 		String suffix = "";
 		if (d > 1000000000) {
 			d /= 1000000000;
@@ -29,6 +29,6 @@ public class MoneyUtils {
 		}
 		NumberFormat format = NumberFormat.getCurrencyInstance(Locale.US);
 		format.setMaximumFractionDigits(2);
-		return format.format(d) + " " + suffix + "/day";
+		return format.format(d) + " " + suffix + (daily ? "/day" : "");
 	}
 }

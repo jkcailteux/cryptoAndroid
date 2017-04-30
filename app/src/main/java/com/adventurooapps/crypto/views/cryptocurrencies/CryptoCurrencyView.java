@@ -63,7 +63,7 @@ public class CryptoCurrencyView extends FrameLayout {
 		this.cryptoCurrency = cryptoCurrency;
 		nameTV.setText(cryptoCurrency.getName());
 		priceTV.setText(MoneyUtils.formatUSD(cryptoCurrency.getPriceUSD()));
-		volumeTV.setText(MoneyUtils.formatUSDMillions(cryptoCurrency.getDailyVolume()));
+		volumeTV.setText(MoneyUtils.formatUSDScaled(cryptoCurrency.getDailyVolume(), true));
 	}
 
 }
