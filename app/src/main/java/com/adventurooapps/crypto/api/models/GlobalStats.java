@@ -17,7 +17,7 @@ public class GlobalStats {
 	private int activeCurrencies;
 	@SerializedName("active_assets")
 	private int activeAssets;
-	@SerializedName("activeMarkets")
+	@SerializedName("active_markets")
 	private int activeMarkets;
 
 

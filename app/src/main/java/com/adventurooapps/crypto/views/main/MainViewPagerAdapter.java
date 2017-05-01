@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.adventurooapps.crypto.views.BaseFragment;
 import com.adventurooapps.crypto.views.cryptocurrencies.CryptoCurrenciesFragment;
+import com.adventurooapps.crypto.views.globalstats.GlobalStatsFragment;
 
 /**
  * Created by jcailteux on 4/29/17.
@@ -25,7 +26,7 @@ public class MainViewPagerAdapter extends FragmentPagerAdapter {
             case CRYPTOCURRENCIES:
                 return new CryptoCurrenciesFragment();
             case GLOBALSTATS:
-                return new BaseFragment();
+                return new GlobalStatsFragment();
             default:
                 return new BaseFragment();
         }
