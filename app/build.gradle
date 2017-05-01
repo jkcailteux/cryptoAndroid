@@ -36,6 +36,9 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
 
+    //Firebase
+    compile 'com.google.firebase:firebase-ads:10.2.4'
+    compile 'com.google.firebase:firebase-core:10.2.4'
 
     //Test
     testCompile 'junit:junit:4.12'
@@ -43,3 +46,5 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 }
+
+apply plugin: 'com.google.gms.google-services'

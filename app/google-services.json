@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "429506195482",
+    "firebase_url": "https://crypto-4aa71.firebaseio.com",
+    "project_id": "crypto-4aa71",
+    "storage_bucket": "crypto-4aa71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429506195482:android:9cec160dd5e1c1f0",
+        "android_client_info": {
+          "package_name": "com.adventurooapps.crypto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "429506195482-bebl6d2s39o8vo3pifhmvhceageem6pu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWNj0A8_kN07WQMMwu1oqm1Ovh07OpA_k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
