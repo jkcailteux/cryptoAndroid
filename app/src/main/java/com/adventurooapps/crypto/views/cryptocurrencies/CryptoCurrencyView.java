@@ -10,6 +10,11 @@ import android.widget.TextView;
 import com.adventurooapps.crypto.R;
 import com.adventurooapps.crypto.api.models.CryptoCurrency;
 import com.adventurooapps.crypto.util.MoneyUtils;
+import com.jakewharton.rxbinding2.view.RxView;
+
+import io.reactivex.Observable;
+import io.reactivex.functions.Consumer;
+
 
 /**
  * Created by jcailteux on 4/29/17.
@@ -53,9 +58,16 @@ public class CryptoCurrencyView extends FrameLayout {
 		volumeTV = (TextView) findViewById(R.id.volume_tv);
 	}
 
-	public static CryptoCurrencyView build(Context context) {
-		CryptoCurrencyView view = new CryptoCurrencyView(context);
+	public static CryptoCurrencyView build(final Context context) {
+		final CryptoCurrencyView view = new CryptoCurrencyView(context);
 		view.onFinishInflate();
+		Observable<Object> clickObservable = RxView.clicks(view);
+		clickObservable.subscribe(new Consumer<Object>() {
+			@Override
+			public void accept(Object o) throws Exception {
+				CryptoCurrencyDetailActivity.startMe(context, view.cryptoCurrency);
+			}
+		});
 		return view;
 	}
 
